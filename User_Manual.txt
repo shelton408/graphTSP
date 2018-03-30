@@ -1,0 +1,28 @@
+@Author Shelton Cai
+Python v. 3.6.2
+
+graphTSP User Manual:
+1.To run the program, please run the file main.py through a terminal using python. 
+2.The program will prompt for user input regarding the file to read. To test with sample input, enter: ./samp.txt
+3.The terminal will then output the graph, the distance table, information on the graph, and the shortest distance through all checkpoints from S to G
+4.The program will repeat from step 2, to exit, 
+
+
+
+program listings:
+main.py- runs a prompt for input to run the TSP through the Held-Karp algorithm
+classes\nodes.py- creates a node object for use in reading the graph and running BFS
+
+Method listings(further details in in-line documentation):
+parseFileToArray- reads a file in as a 2d array of characters
+parseArraytoNodeArr- changes an array of strs to an array of nodes
+getFirstIndexOf- finds the index of the first node of type nodeType(parameter)
+formDistTable- forms the distance table used for dynamic programming
+formNeighbors- finds the distance of a node to all other nodes
+TSP- sets up for the iterating of the DP table
+tspIter- propogates values through a table to solve the minimal distance
+TSPGraphDist- A function that takes a filename as input, and uses all aformented methods to calculate the solution
+main- prompts for user input to run TSPGraphDist
+
+Sample Outputs:
+sampleOutput\output1- terminal output of the program run on ./samp.txt
